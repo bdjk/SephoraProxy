@@ -1,0 +1,31 @@
+{
+  "name": "sephoraproxy",
+  "version": "1.0.0",
+  "description": "proxy server to connect all the modules for sephora product page",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon ./server"
+  },
+  "keywords": [
+    "proxy",
+    "server"
+  ],
+  "author": "Drew",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4",
+    "path": "^0.12.7",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^3.4.9"
+  }
+}
