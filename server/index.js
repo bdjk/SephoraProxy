@@ -11,32 +11,34 @@ app.use(parser.urlencoded({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, '../static')));
 
-app.get('/product', (req, res) => {
-  axios
-    .get('http://localhost:1337/product', req.params)
-    .then(data => res.send(data.data))
-    .catch(err => res.status(404).send(err));
-});
+// app.get('/product', (req, res) => {
+//   axios
+//     .get('http://localhost:5000/product', req.params)
+//     .then(data => res.send(data.data))
+//     .catch(err => res.status(404).send(err));
+// });
 
 app.get('/api', (req, res) => {
   axios
-    .get('http://localhost:4000/api', { params: req.query })
+    .get('http://ec2-54-183-96-251.us-west-1.compute.amazonaws.com:4000/api', {
+      params: req.query
+    })
     .then(data => res.send(data.data))
     .catch(err => res.status(404).send(err));
 });
 
-app.get('/api/mydb', (req, res) => {
-  axios
-    .get('http://localhost:7777/api/mydb', req.params)
-    .then(data => res.send(data.data))
-    .catch(err => res.status(404).send(err));
-});
-app.get('/review', (req, res) => {
-  axios
-    .get('http://localhost:3000/review', req.params)
-    .then(data => res.send(data.data))
-    .catch(err => res.status(404).send(err));
-});
+// app.get('/api/mydb', (req, res) => {
+//   axios
+//     .get('http://localhost:7777/api/mydb', req.params)
+//     .then(data => res.send(data.data))
+//     .catch(err => res.status(404).send(err));
+// });
+// app.get('/review', (req, res) => {
+//   axios
+//     .get('http://localhost:3000/review', req.params)
+//     .then(data => res.send(data.data))
+//     .catch(err => res.status(404).send(err));
+// });
 
 app.listen(PORT, (err, result) => {
   if (err) {
