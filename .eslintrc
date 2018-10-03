@@ -1,0 +1,32 @@
+{
+  "plugins": [
+      "react"
+  ],
+  "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true,
+          "modules": true
+      }
+  },
+  "env": {
+      "es6":     true,
+      "browser": true,
+      "node":    true,
+      "mocha":   true
+  },   
+  "extends": [
+      "eslint:recommended", 
+      "plugin:react/recommended"
+  ],    
+  "rules": {
+    "quotes":             [ 2, "single" ],
+    "semi":               [ 2, "always" ],        
+    "guard-for-in":       2,
+    "no-eval":            2,
+    "no-with":            2,
+    "valid-typeof":       2,
+    "react/prefer-es6-class": 1
+  }
+}

@@ -18,6 +18,7 @@ app.use(express.static(path.resolve(__dirname, '../static')));
 //     .catch(err => res.status(404).send(err));
 // });
 
+
 app.get('/api', (req, res) => {
   axios
     .get('http://ec2-54-183-96-251.us-west-1.compute.amazonaws.com:4000/api', {
